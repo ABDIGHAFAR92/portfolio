@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdighafar Hassan | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #0ff0fc;
+            --matrix-green: #00ff41;
+            --cyber-purple: #bc13fe;
+            --dark-bg: #0a0a12;
+            --darker-bg: #050508;
+            --terminal-text: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--terminal-text);
+            font-family: 'Roboto Mono', monospace;
+            line-height: 1.6;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            border-bottom: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--cyber-purple);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--cyber-purple);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, var(--neon-blue), var(--matrix-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 2px;
+            margin: 0.5rem 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: rgba(10, 10, 18, 0.7);
+            border: 1px solid var(--neon-blue);
+            border-radius: 5px;
+            margin: 2rem 0;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0, 242, 252, 0.1);
+        }
+
+        h2 {
+            color: var(--neon-blue);
+            font-family: 'Orbitron', sans-serif;
+            border-bottom: 1px solid var(--cyber-purple);
+            padding-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-card {
+            background: rgba(5, 5, 8, 0.8);
+            border: 1px solid var(--matrix-green);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            background: rgba(5, 5, 8, 0.8);
+            border: 1px solid var(--cyber-purple);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--cyber-purple);
+        }
+
+        .tech-button {
+            background: var(--darker-bg);
+            color: var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+            padding: 0.8rem 1.5rem;
+            font-family: 'Roboto Mono', monospace;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 0.5rem 0;
+            display: inline-block;
+        }
+
+        .tech-button:hover {
+            box-shadow: 0 0 15px var(--neon-blue);
+            transform: translateY(-3px);
+        }
+
+        .whatsapp-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-input {
+            background: rgba(5, 5, 8, 0.7);
+            border: 1px solid var(--cyber-purple);
+            color: white;
+            padding: 0.8rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid var(--neon-blue);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="abdighafar.jpg" alt="Abdighafar Hassan" class="profile-pic">
+            <h1>ABDIGHAFAR HASSAN</h1>
+            <p style="color: var(--matrix-green);">DATA SCIENTIST | DEVELOPER | CYBERSECURITY ENTHUSIAST</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section" id="about">
+            <h2>ABOUT ME</h2>
+            <p>Nairobi-based tech specialist with expertise in data science, software development, and cybersecurity. Passionate about building intelligent systems and secure solutions.</p>
+        </section>
+
+        <section class="section" id="skills">
+            <h2>TECHNICAL SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <p>C, C++, Java, Python, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-database"></i> Data Science</h3>
+                    <p>Pandas, TensorFlow, SQL, Data Visualization</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-lock"></i> Cybersecurity</h3>
+                    <p>Kali Linux, Metasploit, Wireshark</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-globe"></i> Web Development</h3>
+                    <p>HTML/CSS, React, Node.js</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2>PROJECT SHOWCASE</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="financial-tracker.jpg" alt="Financial Help Tracker" class="project-img">
+                    <div class="project-info">
+                        <h3>Financial Help Tracker</h3>
+                        <p>Java application for personal finance management with expense tracking and analytics.</p>
+                        <a href="#" class="tech-button">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="hacking-lab.jpg" alt="Ethical Hacking Lab" class="project-img">
+                    <div class="project-info">
+                        <h3>Ethical Hacking Lab</h3>
+                        <p>Virtual penetration testing environment with security tools.</p>
+                        <a href="#" class="tech-button">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>CONTACT ME</h2>
+            <p>Send me a message directly through your WhatsApp:</p>
+            <form class="whatsapp-form" id="messageForm">
+                <input type="text" class="tech-input" id="name" placeholder="Your Name" required>
+                <input type="tel" class="tech-input" id="phone" placeholder="Your WhatsApp Number (e.g., 254700000000)" required>
+                <textarea class="tech-input" id="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="tech-button">
+                    <i class="fab fa-whatsapp"></i> OPEN WHATSAPP CHAT
+                </button>
+            </form>
+            <p style="color: var(--matrix-green); font-size: 0.9rem; margin-top: 1rem;">
+                Note: This will open WhatsApp on your phone with a pre-filled message to me.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Abdighafar Hassan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            let phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Convert phone to international format if it starts with 0
+            if (phone.startsWith('0')) {
+                phone = '254' + phone.substring(1);
+            }
+            
+            // Validate phone number (Kenyan format)
+            if (!/^254[17]\d{8}$/.test(phone)) {
+                alert("Please enter a valid Kenyan WhatsApp number (e.g., 254700000000)");
+                return;
+            }
+            
+            // Format the message
+            const formattedMessage = `Hello Abdighafar,\n\nMy name is ${name}.\n\n${message}`;
+            
+            // Create WhatsApp link using THEIR number to start a chat with YOU
+            const whatsappUrl = `https://wa.me/254725177467?text=${encodeURIComponent(formattedMessage)}`;
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
