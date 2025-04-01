@@ -29,29 +29,53 @@
             background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
             border-bottom: 1px solid var(--neon-blue);
             box-shadow: 0 0 15px var(--cyber-purple);
-            padding: 2rem 0;
+            padding: 3rem 0 2rem;
             text-align: center;
+            position: relative;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
         }
 
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--neon-blue);
-            box-shadow: 0 0 20px var(--cyber-purple);
-            margin-bottom: 1rem;
+            border: 4px solid var(--neon-blue);
+            box-shadow: 0 0 30px var(--cyber-purple);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px var(--matrix-green);
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             background: linear-gradient(90deg, var(--neon-blue), var(--matrix-green));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             margin: 0.5rem 0;
+            text-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--matrix-green);
+            margin: 0.5rem 0 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .container {
@@ -64,172 +88,316 @@
         .section {
             background: rgba(10, 10, 18, 0.7);
             border: 1px solid var(--neon-blue);
-            border-radius: 5px;
-            margin: 2rem 0;
-            padding: 2rem;
-            box-shadow: 0 0 20px rgba(0, 242, 252, 0.1);
+            border-radius: 8px;
+            margin: 2.5rem 0;
+            padding: 2.5rem;
+            box-shadow: 0 0 25px rgba(0, 242, 252, 0.15);
         }
 
         h2 {
             color: var(--neon-blue);
             font-family: 'Orbitron', sans-serif;
-            border-bottom: 1px solid var(--cyber-purple);
+            font-size: 2rem;
+            border-bottom: 2px solid var(--cyber-purple);
             padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .about-details {
+            background: rgba(5, 5, 8, 0.6);
+            border: 1px solid var(--matrix-green);
+            border-radius: 5px;
+            padding: 1.5rem;
+        }
+
+        .detail-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .detail-item i {
+            color: var(--neon-blue);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .skill-card {
             background: rgba(5, 5, 8, 0.8);
             border: 1px solid var(--matrix-green);
-            padding: 1rem;
-            border-radius: 5px;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 65, 0.2);
+        }
+
+        .skill-card h3 {
+            color: var(--neon-blue);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-card h3 i {
+            margin-right: 10px;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .project-card {
             background: rgba(5, 5, 8, 0.8);
             border: 1px solid var(--cyber-purple);
-            border-radius: 5px;
+            border-radius: 8px;
             overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(188, 19, 254, 0.3);
         }
 
         .project-img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
-            border-bottom: 1px solid var(--cyber-purple);
+            border-bottom: 2px solid var(--cyber-purple);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            color: var(--neon-blue);
+            margin-top: 0;
+            font-size: 1.4rem;
         }
 
         .tech-button {
             background: var(--darker-bg);
             color: var(--neon-blue);
-            border: 1px solid var(--neon-blue);
-            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--neon-blue);
+            padding: 0.8rem 1.8rem;
             font-family: 'Roboto Mono', monospace;
             cursor: pointer;
             transition: all 0.3s;
             margin: 0.5rem 0;
             display: inline-block;
+            font-size: 1rem;
+            border-radius: 5px;
         }
 
         .tech-button:hover {
-            box-shadow: 0 0 15px var(--neon-blue);
+            background: rgba(15, 240, 252, 0.1);
+            box-shadow: 0 0 20px var(--neon-blue);
             transform: translateY(-3px);
         }
 
         .whatsapp-form {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 1.2rem;
+            margin-top: 2rem;
         }
 
         .tech-input {
             background: rgba(5, 5, 8, 0.7);
             border: 1px solid var(--cyber-purple);
             color: white;
-            padding: 0.8rem;
+            padding: 1rem;
             font-family: 'Roboto Mono', monospace;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        .tech-input:focus {
+            outline: none;
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 15px var(--cyber-purple);
         }
 
         footer {
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
-            border-top: 1px solid var(--neon-blue);
+            padding: 3rem 0;
+            margin-top: 3rem;
+            border-top: 2px solid var(--neon-blue);
+            background: rgba(5, 5, 8, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-pic {
+                width: 180px;
+                height: 180px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="abdighafar.jpg" alt="Abdighafar Hassan" class="profile-pic">
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Abdighafar Hassan" class="profile-pic">
             <h1>ABDIGHAFAR HASSAN</h1>
-            <p style="color: var(--matrix-green);">DATA SCIENTIST | DEVELOPER | CYBERSECURITY ENTHUSIAST</p>
+            <p class="tagline">Building intelligent systems at the intersection of data science and cybersecurity</p>
         </div>
     </header>
 
     <div class="container">
+        <!-- About Section -->
         <section class="section" id="about">
-            <h2>ABOUT ME</h2>
-            <p>Nairobi-based tech specialist with expertise in data science, software development, and cybersecurity. Passionate about building intelligent systems and secure solutions.</p>
-        </section>
-
-        <section class="section" id="skills">
-            <h2>TECHNICAL SKILLS</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
-                    <p>C, C++, Java, Python, JavaScript</p>
+            <h2><i class="fas fa-user-astronaut"></i> ABOUT ME</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate technologist from Nairobi, Kenya, specializing in creating innovative solutions that bridge data science, software development, and cybersecurity. With a strong foundation in computer science and mathematics, I approach problems with both analytical rigor and creative thinking.</p>
+                    
+                    <p>My journey in technology began when I wrote my first line of C code in high school, sparking a lifelong fascination with how systems work. This evolved into expertise across multiple domains, allowing me to build everything from financial applications to security tools.</p>
+                    
+                    <p>When I'm not coding, you'll find me contributing to open-source projects, mentoring aspiring developers, or exploring new technologies in the ever-evolving tech landscape.</p>
                 </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-database"></i> Data Science</h3>
-                    <p>Pandas, TensorFlow, SQL, Data Visualization</p>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-lock"></i> Cybersecurity</h3>
-                    <p>Kali Linux, Metasploit, Wireshark</p>
-                </div>
-                <div class="skill-card">
-                    <h3><i class="fas fa-globe"></i> Web Development</h3>
-                    <p>HTML/CSS, React, Node.js</p>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nairobi, Kenya</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Computer Science & Mathematics</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>over a half a year development experience</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Certified Ethical Hacker</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>10+ completed projects</span>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2><i class="fas fa-code-branch"></i> TECHNICAL SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <p>C, C++, Java, Python, JavaScript, SQL, Assembly</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-brain"></i> Data Science</h3>
+                    <p>Pandas, NumPy, TensorFlow, Scikit-learn, Data Visualization</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-shield-virus"></i> Cybersecurity</h3>
+                    <p>Kali Linux, Metasploit, Wireshark, Burp Suite, OWASP</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-layer-group"></i> Web Development</h3>
+                    <p>HTML5/CSS3, JavaScript, React, Node.js, REST APIs</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <p>MySQL, PostgreSQL, MongoDB, SQLite, Redis</p>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <p>Git, Docker, AWS, Linux, Jupyter, VS Code</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
         <section class="section" id="projects">
-            <h2>PROJECT SHOWCASE</h2>
+            <h2><i class="fas fa-project-diagram"></i> PROJECT SHOWCASE</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <img src="financial-tracker.jpg" alt="Financial Help Tracker" class="project-img">
                     <div class="project-info">
                         <h3>Financial Help Tracker</h3>
-                        <p>Java application for personal finance management with expense tracking and analytics.</p>
-                        <a href="#" class="tech-button">View Details</a>
+                        <p>A comprehensive Java application for personal finance management featuring expense tracking, budget analytics, and financial forecasting with interactive dashboards.</p>
+                        <p><strong>Technologies:</strong> Java, JavaFX, SQLite, Charting Libraries</p>
+                        <a href="#" class="tech-button">View Project Details</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="hacking-lab.jpg" alt="Ethical Hacking Lab" class="project-img">
                     <div class="project-info">
                         <h3>Ethical Hacking Lab</h3>
-                        <p>Virtual penetration testing environment with security tools.</p>
-                        <a href="#" class="tech-button">View Details</a>
+                        <p>A virtualized penetration testing environment with automated vulnerability assessment tools and custom security scripts for network analysis and defense.</p>
+                        <p><strong>Technologies:</strong> Python, Kali Linux, Metasploit, Wireshark</p>
+                        <a href="#" class="tech-button">View Project Details</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section class="section" id="contact">
-            <h2>CONTACT ME</h2>
-            <p>Send me a message directly through your WhatsApp:</p>
+            <h2><i class="fas fa-envelope"></i> CONTACT ME</h2>
+            <p>Have a project in mind or want to discuss technology? Send me a message directly through WhatsApp:</p>
             <form class="whatsapp-form" id="messageForm">
                 <input type="text" class="tech-input" id="name" placeholder="Your Name" required>
                 <input type="tel" class="tech-input" id="phone" placeholder="Your WhatsApp Number (e.g., 254700000000)" required>
-                <textarea class="tech-input" id="message" rows="5" placeholder="Your Message" required></textarea>
+                <textarea class="tech-input" id="message" rows="6" placeholder="Your message here..."></textarea>
                 <button type="submit" class="tech-button">
                     <i class="fab fa-whatsapp"></i> OPEN WHATSAPP CHAT
                 </button>
             </form>
             <p style="color: var(--matrix-green); font-size: 0.9rem; margin-top: 1rem;">
-                Note: This will open WhatsApp on your phone with a pre-filled message to me.
+                <i class="fas fa-info-circle"></i> This will open WhatsApp on your device with a pre-filled message
             </p>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2024 Abdighafar Hassan. All rights reserved.</p>
+        <p style="margin-top: 1rem;">
+            <a href="#" style="color: var(--neon-blue); margin: 0 10px;"><i class="fab fa-github"></i></a>
+            <a href="#" style="color: var(--neon-blue); margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+            <a href="#" style="color: var(--neon-blue); margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+        </p>
     </footer>
 
     <script>
@@ -252,7 +420,7 @@
             }
             
             // Format the message
-            const formattedMessage = `Hello Abdighafar,\n\nMy name is ${name}.\n\n${message}`;
+            const formattedMessage = `Hello Abdighafar,\n\nMy name is ${name}.\n\n${message}\n\n[Sent from your portfolio]`;
             
             // Create WhatsApp link using THEIR number to start a chat with YOU
             const whatsappUrl = `https://wa.me/254725177467?text=${encodeURIComponent(formattedMessage)}`;
